@@ -1,11 +1,23 @@
-import { Link } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+---
+title: "Test for Bug"
+date: 2019-09-05T14:53:20.798Z"
+menu: MenuEntry1
+---
+import Notice from '../components/Notice'
 
-<SEO title="Page two" />
+# heading to avoid https://github.com/doczjs/docz/issues/964
 
-# Hi from the second page
+<Notice type={"tip"} title={"Side note"}>
 
-Welcome to page 2
+This text uses *markdown*, but the markdown does not arrive at the component.
 
-<Link to="/">Go back to the homepage</Link>
+</Notice> 
+
+Markdown in the *middle* does not work, either. A [link](www.google.com)
+
+<Notice type={"tip"} title={"Tip"}>
+
+The same is _true_ here.
+
+</Notice>
+
